@@ -1,0 +1,113 @@
+<!--
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    AKAI Frontend Task - HTML
+
+	W tym pliku znajduje się struktura strony z formularzem. Twoim zadaniem jest upiększenie
+	tego formularza. Przeanalizuj poniższy kod. Jego znajomość będzie potrzebna do przerobienia
+	pliku form.css odpowiedzialnego za styl strony. Gdy zapoznasz się ze strukturą strony,
+	przejdź do pliku css/form.css lub js/validation.js po dalsze instrukcje.
+
+    Powodzenia!
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AKAI Frontend Task</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+    <meta
+      name="viewport"
+      charset="utf-8"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+  </head>
+  <body>
+    <!--
+        ...
+        ...
+        ...
+    -->
+
+    <!-- początek formularza -->
+
+    <!-- element section ma ID "task-frontend". Może to się nam przydać m.in. podczas stylowania dokumentu -->
+    <section id="task-frontend">
+      <img src="img/logo.svg" alt="AKAI logo" class="logo" height="70px" />
+      <!-- element span otrzymuje klasę "basic-title". Klasa ta może być wykorzystywana w wielu różnych elementach -->
+      <span class="basic-title">Formularz rejestracyjny</span>
+
+      <form method="POST" id="register">
+        <!-- od użytkownika pobieramy imię, nazwisko, email oraz informację, do jakiej sekcji chce dołączyć -->
+        <div class="input">
+          <input type="text" id="first-name" placeholder=" " />
+          <label for="first-name">Imię</label>
+        </div>
+        <p id="alert-firstName"></p>
+        <div class="input">
+          <input type="text" id="last-name" placeholder=" " />
+          <label for="last-name">Nazwisko</label>
+        </div>
+        <p id="alert-lastName"></p>
+        <div class="input">
+          <input type="email" id="email" placeholder=" " />
+          <label for="email">Email</label>
+        </div>
+        <p id="alert-email"></p>
+
+        <span>Sekcje, które cię interesują:</span>
+        <div class="checkbox">
+          <div>
+            <input
+              type="checkbox"
+              id="frontend-checkbox"
+              name="section"
+              value="frontend"
+            />
+            <div class="label">Frontend</div>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="backend-checkbox"
+              name="section"
+              value="backend"
+            />
+            <div class="label">Backend</div>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="mobile-checkbox"
+              name="section"
+              value="mobile"
+            />
+            <div class="label">Mobile</div>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="graphics-checkbox"
+              name="section"
+              value="grafika"
+            />
+            <div class="label">Grafika</div>
+          </div>
+        </div>
+        <p id="alert-section"></p>
+        <br />
+        <input type="submit" value="Wyślij" />
+      </form>
+    </section>
+    <!-- koniec formularza -->
+
+    <!--
+        ...
+        ...
+        ...
+    -->
+
+    <!-- zaimportowanie pliku z kodem javascript, który dokona walidacji danych (zadanie JS) -->
+    <script type="text/javascript" src="js/validation.js"></script>
+  </body>
+</html>
