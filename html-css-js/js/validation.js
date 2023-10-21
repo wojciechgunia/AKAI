@@ -26,21 +26,21 @@ document.getElementById("register").addEventListener("submit", (e) => {
   const alertSection = document.getElementById("alert-section");
 
   firstNameAlert.style.display = "none";
-  if (firstName < 2) {
+  if (firstName.length < 2) {
     firstNameAlert.style.display = "block";
     firstNameAlert.innerHTML = "Imię musi posiadać co najmniej 2 znaki";
   }
-  if (firstName > 40) {
+  if (firstName.length > 40) {
     firstNameAlert.style.display = "block";
     firstNameAlert.innerHTML = "Imię może posiadać co najwyżej 40 znaków";
   }
 
   lastNameAlert.style.display = "none";
-  if (lastName < 2) {
+  if (lastName.length < 2) {
     lastNameAlert.style.display = "block";
     lastNameAlert.innerHTML = "Nazwisko musi posiadać co najmniej 2 znaki";
   }
-  if (lastName > 40) {
+  if (lastName.length > 40) {
     lastNameAlert.style.display = "block";
     lastNameAlert.innerHTML = "Nazwisko może posiadać co najwyżej 40 znaków";
   }
